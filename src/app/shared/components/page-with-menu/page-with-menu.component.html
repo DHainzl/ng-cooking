@@ -1,0 +1,13 @@
+<div class="row">
+    <nav class="col-sm-3 col-md-2 hidden-xs-down bg-faded sidebar">
+        <ul class="nav nav-pills flex-column" *ngFor="let menuPart of menu">
+            <li class="nav-item" *ngFor="let menuItem of menuPart">
+                <a class="nav-link" [routerLink]="menuItem.url" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">{{menuItem.name}}</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
+        <ng-content></ng-content>
+    </main>
+</div>
